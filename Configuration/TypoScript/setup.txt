@@ -1,0 +1,73 @@
+
+plugin.tx_y7fahrzeugdatenbank {
+	view {
+		templateRootPath = {$plugin.tx_y7fahrzeugdatenbank.view.templateRootPath}
+		partialRootPath = {$plugin.tx_y7fahrzeugdatenbank.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_y7fahrzeugdatenbank.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_y7fahrzeugdatenbank.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	
+	settings {
+		# Page UID = Kat.UID
+		p144  =  7
+		p129  =  6
+		p128  =  5
+		p127  =  4
+		p126  =  3
+		p125  =  2
+		p124  =  1
+	}
+
+}
+
+
+plugin.tx_y7fahrzeugdatenbank._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-y7-fahrzeugdatenbank table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-y7-fahrzeugdatenbank table th {
+		font-weight:bold;
+	}
+
+	.tx-y7-fahrzeugdatenbank table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+	
+	table td {
+		padding: 5px;
+		margin: 2px;
+	}
+	
+	img {
+		width: 250px;
+		border: 1px solid black;
+		margin: 5px;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)

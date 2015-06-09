@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-03-18T13:08:29Z" product-name="y7_fahrzeugdatenbank">
+		<header/>
+		<body>
+			<trans-unit id="news_uid.description">
+				<source>Uid of News Record</source>
+			</trans-unit>
+			<trans-unit id="fahrzeug_uid.description">
+				<source>Uid of Fahrzeug Record</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

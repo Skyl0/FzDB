@@ -1,0 +1,32 @@
+
+<table class="tx-y7-fahrzeugdatenbank" >
+	<tr>
+		<td>
+			<f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.beschreibung" />
+		</td>
+		<td>
+		{fahrzeug.beschreibung}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.bild" />
+		</td>
+		<td>
+			<f:if condition="{fahrzeug.bild}"><f:then>
+				<a href="{fahrzeug.bild.originalResource.publicUrl}" data-lightbox="fz_db" data-title="{fahrzeug.name}">
+				<f:image src="{fahrzeug.bild.originalResource.originalFile.uid}" alt="{fahrzeug.beschreibung}"/></a>			
+				</f:then><f:else>Kein Bild vorhanden.</f:else></f:if>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.datenblatt" />
+		</td>
+		<td>
+				<a href="{fahrzeug.datenblatt.originalResource.publicUrl}">
+					{fahrzeug.datenblatt.originalResource.name}
+				</a>
+		</td>
+	</tr>
+</table>

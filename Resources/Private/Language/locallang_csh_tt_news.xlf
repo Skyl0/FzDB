@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-03-19T12:18:22Z" product-name="y7_fahrzeugdatenbank">
+		<header/>
+		<body>
+			<trans-unit id="is_operation.description">
+				<source>isOperation</source>
+			</trans-unit>
+			<trans-unit id="participate.description">
+				<source>1 News Item Can Have N participating Vehicles (0..n)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

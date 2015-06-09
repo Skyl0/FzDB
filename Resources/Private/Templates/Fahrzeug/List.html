@@ -1,0 +1,41 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+<f:flashMessages renderMode="div" />
+
+<table  class="tx_y7fahrzeugdatenbank" >
+	<tr>
+		<th><f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.name" /></th>
+		<th><f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.beschreibung" /></th>
+		<th><f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.bild" /></th>
+
+	</tr>
+
+	<f:for each="{fahrzeugs}" as="fahrzeug">
+		<tr>
+			<td><f:link.action action="show" arguments="{fahrzeug : fahrzeug}"> {fahrzeug.name}</f:link.action></td>
+			<td> {fahrzeug.beschreibung}</td>
+			<td>
+				<f:if condition="{fahrzeug.bild}"><f:then>
+				<a href="{fahrzeug.bild.originalResource.publicUrl}" data-lightbox="fz_db" data-title="{fahrzeug.name}">
+				<f:image src="{fahrzeug.bild.originalResource.originalFile.uid}" alt="{fahrzeug.beschreibung}"/></a>			
+				</f:then><f:else>Kein Bild vorhanden.</f:else></f:if>
+			</td>
+		</tr>
+	</f:for>
+</table>
+
+</f:section>

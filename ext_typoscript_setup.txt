@@ -1,0 +1,15 @@
+
+config.tx_extbase{
+    persistence{
+        classes{
+
+            Y7group\Y7Fahrzeugdatenbank\Domain\Model\TTnewsObj {
+                mapping {
+                    tableName = tt_news
+                    recordType = Tx_Y7Fahrzeugdatenbank_TTnewsObj
+                }
+            }
+            
+    	}
+    }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-03-24T17:18:50Z" product-name="y7_fahrzeugdatenbank">
+		<header/>
+		<body>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fahrzeug">
+				<source>Fahrzeug</source>
+			</trans-unit>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.bild">
+				<source>Bild</source>
+			</trans-unit>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.datenblatt">
+				<source>Datenblatt</source>
+			</trans-unit>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.kategorie">
+				<source>Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fzkategorie">
+				<source>Fz Kategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fzkategorie.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fzkategorie.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_y7fahrzeugdatenbank_domain_model_fzkategorie.bild">
+				<source>Bild</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
