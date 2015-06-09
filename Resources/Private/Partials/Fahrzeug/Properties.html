@@ -1,7 +1,13 @@
 
 <div class="tx-y7-fahrzeugdatenbank-parts">
-	<f:debug>{fahrzeug}</f:debug>
-		<p class="clearfix"><a href="{fahrzeug.bild.originalResource.publicUrl}" data-lightbox="fz_db" data-title="{fahrzeug.name}" style="float:right; margin-left:10px;"><f:image src="{fahrzeug.bild.originalResource.publicUrl}" width="270"/></a> {fahrzeug.beschreibung}</p>
-    
+	<f:debug>{fahrzeug.bild}</f:debug>
+		<p class="clearfix">
+		<f:for_each="{fahrzeug}" as="fz" > 
+			<a href="{fz.bild.originalResource.publicUrl}" data-lightbox="fz_db" data-title="{fahrzeug.name}" style="float:right; margin-left:10px;">
+			<f:image src="{fz.bild.originalResource.publicUrl}" width="270" />
+			</a>
+			{fahrzeug.beschreibung}<br/>
+    	</f:for>
+    	</p>
     <div class="datenblatt"><a href="{fahrzeug.datenblatt.originalResource.publicUrl}" target="_blank">Datenblatt</a></div>
 </div>
