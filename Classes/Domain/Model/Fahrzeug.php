@@ -147,8 +147,8 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
 	 * @return void
 	 */
-	public function addImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image) {
-		$this->bild->attach($image);
+	public function addImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $bildToAdd) {
+		$this->bild->attach($bildToAdd);
 	}
 
 	/**
@@ -157,15 +157,15 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $imageToRemove The FileReference to be removed
 	 * @return void
 	 */
-	public function removeImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $imageToRemove) {
-		$this->bild->detach($imageToRemove);
+	public function removeImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $bildToRemove) {
+		$this->bild->detach($bildToRemove);
 	}
 		/**
 	 * Returns the images
 	 *
 	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
 	 */
-	public function getImages() {
+	public function getBild() {
 		return $this->bild;
 	}
 
@@ -175,8 +175,8 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
 	 * @return void
 	 */
-	public function setImages(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $images) {
-		$this->bild = $images;
+	public function setBild(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $bild) {
+		$this->bild = $bild;
 	}
 
 
