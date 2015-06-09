@@ -51,10 +51,10 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * bild
 	 *
-	 * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
-	 * @validate NotEmpty
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
+	 * @lazy
 	 */
-	protected $bild = NULL;
+	protected $bild;
 
 	/**
 	 * datenblatt
@@ -108,10 +108,23 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 		$this->beschreibung = $beschreibung;
 	}
 
+		 /**
+         * Constructor
+         *
+         * @return AbstractObject
+         */
+        public function __construct() {
+                // ObjectStorage is needed to reference multiple files to one field
+                // see also @var before variable and @return before the respective get() method
+                $this->bild = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        }
+
+	
+
 	/**
 	 * Returns the bild
 	 *
-	 * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $bild
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $bild
 	 */
 	public function getBild() {
 		return $this->bild;
@@ -120,10 +133,10 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the bild
 	 *
-	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $bild
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $bild
 	 * @return void
 	 */
-	public function setBild(\TYPO3\CMS\Extbase\Domain\Model\FileReference $bild) {
+	public function setBild(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $bild) {
 		$this->bild = $bild;
 	}
 

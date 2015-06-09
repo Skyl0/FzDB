@@ -89,7 +89,7 @@ $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fahrzeug'] = array(
 			'label' => 'LLL:EXT:y7_fahrzeugdatenbank/Resources/Private/Language/locallang_db.xlf:tx_y7fahrzeugdatenbank_domain_model_fahrzeug.bild',
 			'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 				'bild',
-				array('maxitems' => 1),
+				array('maxitems' => 99),
 				$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 			),
 		),

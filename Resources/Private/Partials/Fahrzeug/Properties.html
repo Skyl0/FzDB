@@ -1,37 +1,7 @@
-<!--
-<table class="tx-y7-fahrzeugdatenbank" >
-	<tr>
-		<td>
-			<f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.beschreibung" />
-		</td>
-		<td>
-		{fahrzeug.beschreibung}
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.bild" />
-		</td>
-		<td>
-			<a href="{fahrzeug.bild.originalResource.publicUrl}" data-lightbox="fz_db" data-title="{fahrzeug.name}">
-				<f:image src="{fahrzeug.bild.originalResource.publicUrl}"/>
-			</a>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.datenblatt" />
-		</td>
-		<td>
-				<a href="{fahrzeug.datenblatt.originalResource.publicUrl}">
-					{fahrzeug.datenblatt.originalResource.name}
-				</a>
-		</td>
-	</tr>
-</table>
--->
 
 <div class="tx-y7-fahrzeugdatenbank-parts">
-	<p class="clearfix"><a href="{fahrzeug.bild.originalResource.publicUrl}" data-lightbox="fz_db" data-title="{fahrzeug.name}" style="float:right; margin-left:10px;"><f:image src="{fahrzeug.bild.originalResource.publicUrl}" width="270"/></a> {fahrzeug.beschreibung}</p>
-    <div class="datenblatt"><a href="{fahrzeug.datenblatt.originalResource.publicUrl}" target="_blank">Download Datenblatt</a></div>
+	<f:debug>{fahrzeug}</f:debug>
+		<p class="clearfix"><a href="{fahrzeug.bild.originalResource.publicUrl}" data-lightbox="fz_db" data-title="{fahrzeug.name}" style="float:right; margin-left:10px;"><f:image src="{fahrzeug.bild.originalResource.publicUrl}" width="270"/></a> {fahrzeug.beschreibung}</p>
+    
+    <div class="datenblatt"><a href="{fahrzeug.datenblatt.originalResource.publicUrl}" target="_blank">Datenblatt</a></div>
 </div>
