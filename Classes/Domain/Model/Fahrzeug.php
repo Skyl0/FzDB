@@ -52,7 +52,7 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * bild
 	 *
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
-	 * @lazy
+	 * @cascade remove
 	 */
 	protected $bild = NULL;
 
