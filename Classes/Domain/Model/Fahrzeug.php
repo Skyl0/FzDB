@@ -54,7 +54,7 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
 	 * @lazy
 	 */
-	protected $bild;
+	protected $bild = NULL;
 
 	/**
 	 * datenblatt
@@ -125,7 +125,7 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * Returns the bild
 	 *
 	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $bild
-	 */
+	 
 	public function getBild() {
 		return $this->bild;
 	}
@@ -135,11 +135,57 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 *
 	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage $bild
 	 * @return void
+	
+	public function addBild (\TYPO3\Extbase\Domain\Model\FileReference $bild) {
+		//$this->bild = $bild;
+		$this->bild->attach($bild);
+	}
+*/
+		/**
+	 * Adds a FileReference
+	 *
+	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+	 * @return void
 	 */
-	public function setBild(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $bild) {
-		$this->bild = $bild;
+	public function addImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image) {
+		$this->bild->attach($image);
 	}
 
+	/**
+	 * Removes a FileReference
+	 *
+	 * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $imageToRemove The FileReference to be removed
+	 * @return void
+	 */
+	public function removeImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $imageToRemove) {
+		$this->bild->detach($imageToRemove);
+	}
+		/**
+	 * Returns the images
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
+	 */
+	public function getImages() {
+		return $this->bild;
+	}
+
+	/**
+	 * Sets the images
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $images
+	 * @return void
+	 */
+	public function setImages(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $images) {
+		$this->bild = $images;
+	}
+
+
+/**
+ *
+ * Datenblatt
+ * 
+ */
+	
 	/**
 	 * Returns the datenblatt
 	 *
