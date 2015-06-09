@@ -12,10 +12,31 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-
+<h1>Fahrzeugdatenbank
+<f:if condition="{category}==1">
+	<span>/ Löschfahrzeuge</span>
+</f:if>
+<f:if condition="{category}==2">
+	<span>/ Hubrettungsfahrzeuge</span>
+</f:if>
+<f:if condition="{category}==3">
+	<span>/ PKW</span>
+</f:if>
+<f:if condition="{category}==4">
+	<span>/ Abrollbehälter</span>
+</f:if>
+<f:if condition="{category}==5">
+	<span>/ Sonderfahrzeuge</span>
+</f:if>
+<f:if condition="{category}==6">
+	<span>/ Wechselladerfahrzeuge</span>
+</f:if>
+<f:if condition="{category}==7">
+	<span>/ Einsatzleitwagen</span>
+</f:if>
 <f:flashMessages renderMode="div" />
-
-
+</h1>
+<!--
 <table  class="tx_y7fahrzeugdatenbank" >
 	<tr>
 		<th><f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.name" /></th>
@@ -39,5 +60,22 @@ Otherwise your changes will be overwritten the next time you save the extension 
 	</f:for>
 
 </table>
+-->
+<div class="tx_y7fahrzeugdatenbank_list">
+	<f:for each="{vehicles}" as="fahrzeug">
+    <f:if condition="{fahrzeug.kategorie.uid}=={category}">
+    	<div class="tx_y7fahrzeugdatenbank_list_item clearfix">
+    	<f:if condition="{fahrzeug.bild}"><f:then>
+				<f:link.action action="show" arguments="{fahrzeug : fahrzeug}">
+				<f:image src="{fahrzeug.bild.originalResource.originalFile.uid}" alt="{fahrzeug.beschreibung}" width="270" />
+                </f:link.action>		
+		</f:then><f:else>Kein Bild vorhanden.</f:else></f:if>
+    	<h2><f:link.action action="show" arguments="{fahrzeug : fahrzeug}">{fahrzeug.name}</f:link.action></h2>
+        <p>{fahrzeug.beschreibung}</p>
+        </div>
+    </f:if>
+    </f:for>
+</div>
+
 
 </f:section>

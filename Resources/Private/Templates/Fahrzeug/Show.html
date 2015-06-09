@@ -13,10 +13,10 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h2>{fahrzeug.name}</h2>
+<h1>{fahrzeug.name}</h1>
 
 <f:flashMessages renderMode="div" />
 <f:render partial="Fahrzeug/Properties" arguments="{fahrzeug:fahrzeug}" />
-<f:link.action action="list">Zur&uuml;ck zur Listenansicht</f:link.action><br />
+<f:link.action action="list" class="backlink">Zur&uuml;ck zur Listenansicht</f:link.action><br />
 
 </f:section>

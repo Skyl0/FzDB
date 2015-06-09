@@ -13,9 +13,9 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-
+<h1>Fahrzeugdatenbank</h1>
 <f:flashMessages renderMode="div" />
-
+<!--
 <table  class="tx_y7fahrzeugdatenbank" >
 	<tr>
 		<th><f:translate key="tx_y7fahrzeugdatenbank_domain_model_fahrzeug.name" /></th>
@@ -37,5 +37,19 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		</tr>
 	</f:for>
 </table>
+-->
+<div class="tx_y7fahrzeugdatenbank_list">
+	<f:for each="{fahrzeugs}" as="fahrzeug">
+    	<div class="tx_y7fahrzeugdatenbank_list_item clearfix">
+    	<f:if condition="{fahrzeug.bild}"><f:then>
+				<f:link.action action="show" arguments="{fahrzeug : fahrzeug}">
+				<f:image src="{fahrzeug.bild.originalResource.originalFile.uid}" alt="{fahrzeug.beschreibung}" width="270" />
+                </f:link.action>		
+		</f:then><f:else>Kein Bild vorhanden.</f:else></f:if>
+    	<h2><f:link.action action="show" arguments="{fahrzeug : fahrzeug}">{fahrzeug.name}</f:link.action></h2>
+        <p>{fahrzeug.beschreibung}</p>
+        </div>
+    </f:for>
+</div>
 
 </f:section>
