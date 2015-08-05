@@ -11,6 +11,7 @@ CREATE TABLE tx_y7fahrzeugdatenbank_domain_model_fahrzeug (
 	bild varchar(255) DEFAULT '' NOT NULL,
 	datenblatt int(11) unsigned NOT NULL default '0',
 	kategorie int(11) unsigned DEFAULT '0',
+	feuerwehr int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

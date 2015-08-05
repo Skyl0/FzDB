@@ -81,8 +81,18 @@ $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fahrzeug'] = array(
 				'type' => 'text',
 				'cols' => 40,
 				'rows' => 15,
-				'eval' => 'trim,required'
-			)
+				'eval' => 'trim,required',
+				'wizards' => array(
+					'RTE' => array(
+						'icon' => 'wizard_rte2.gif',
+						'notNewRecords'=> 1,
+						'RTEonly' => 1,
+						'script' => 'wizard_rte.php',
+						'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
+						'type' => 'script'
+					)
+				)
+			),
 		),
 		'bild' => array(
 			'exclude' => 1,
@@ -110,6 +120,24 @@ $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fahrzeug'] = array(
 				'foreign_table' => 'tx_y7fahrzeugdatenbank_domain_model_fzkategorie',
 				'minitems' => 1,
 				'maxitems' => 1,
+			),
+		),
+		
+		'feuerwehr' => array(
+			'exclude' => 1,
+			'label' => 'LLL:EXT:fztest/Resources/Private/Language/locallang_db.xlf:tx_fztest_domain_model_fahrzeug.feuerwehr',
+			'config' => array(
+				'type' => 'select',
+				'items' => array(
+					array('Berufsfeuerwehr', 0),
+					array('FF Darmstadt-Arheilgen', 1),
+					array('FF Darmstadt-Eberstadt', 2),
+					array('FF Darmstadt-Innenstadt', 3),
+					array('FF Darmstadt-Wixhausen', 4),
+				),
+				'size' => 1,
+				'maxitems' => 1,
+				'eval' => ''
 			),
 		),
 		

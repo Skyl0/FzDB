@@ -82,7 +82,8 @@ $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fzkategorie'] = array(
 				'cols' => 40,
 				'rows' => 15,
 				'eval' => 'trim'
-			)
+			),
+			'defaultExtras' => 'richtext[]'
 		),
 		'bild' => array(
 			'exclude' => 1,
