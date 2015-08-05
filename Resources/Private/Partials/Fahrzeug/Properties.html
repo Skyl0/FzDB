@@ -4,11 +4,19 @@
 		<p class="clearfix">
 		<f:for each="{fahrzeug.bild}" as="bilder" > 
 		<f:debug>{bilder}</f:debug>
-			<a href="{bilder.uid}" data-lightbox="fz_db" data-title="{fahrzeug.name}" style="float:right; margin-left:10px;">
+			<a href="{bilder.uid}" data-lightbox="fz_db-{fahrzeug.uid}" data-title="{fahrzeug.name}" style="float:right; margin-left:10px;">
 			<f:image src="{bilder.originalResource.publicUrl}" width="270" />
 			</a>
     	</f:for>
-        {fahrzeug.beschreibung}<br/>
+        {fahrzeug.beschreibung}<br/>Gehört zu Feuerwehr:<br/>
+        <f:switch expression="{fahrzeug.feuerwehr}">
+		  <f:case value="0">Berufsfeuerwehr</f:case>
+		  <f:case value="1">FF Darmstadt-Arheilgen</f:case>
+		  <f:case value="2">FF Darmstadt-Eberstadt</f:case>
+		   <f:case value="3">FF Darmstadt-Innenstadt</f:case>
+		    <f:case value="4">FF Darmstadt-Wixhausen</f:case>
+		</f:switch>
+        <br/>
     	</p>
     <div class="datenblatt"><a href="{fahrzeug.datenblatt.originalResource.publicUrl}" target="_blank">Datenblatt</a></div>
 </div>

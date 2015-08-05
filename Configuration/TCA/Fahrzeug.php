@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fahrzeug'] = array(
 	'ctrl' => $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fahrzeug']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, beschreibung, bild, datenblatt, kategorie',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, beschreibung, bild, datenblatt, kategorie, feuerwehr',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, beschreibung, bild, datenblatt, kategorie, '),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, beschreibung;;;richtext:rte_transform[mode=ts_links], bild, datenblatt, kategorie, feuerwehr,'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -81,7 +81,7 @@ $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fahrzeug'] = array(
 				'type' => 'text',
 				'cols' => 40,
 				'rows' => 15,
-				'eval' => 'trim,required',
+				'eval' => 'trim',
 				'wizards' => array(
 					'RTE' => array(
 						'icon' => 'wizard_rte2.gif',
@@ -125,7 +125,7 @@ $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fahrzeug'] = array(
 		
 		'feuerwehr' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:fztest/Resources/Private/Language/locallang_db.xlf:tx_fztest_domain_model_fahrzeug.feuerwehr',
+			'label' => 'Gehört zu',
 			'config' => array(
 				'type' => 'select',
 				'items' => array(

@@ -69,7 +69,31 @@ class Fahrzeug extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \Y7group\Y7Fahrzeugdatenbank\Domain\Model\FzKategorie
 	 */
 	protected $kategorie = NULL;
+	
+	/**
+	 * feuerwehr
+	 *
+	 * @var integer
+	 */
+	protected $feuerwehr = 0;
+	/**
+	 * Returns the feuerwehr
+	 *
+	 * @return integer $feuerwehr
+	 */
+	public function getFeuerwehr() {
+		return $this->feuerwehr;
+	}
 
+	/**
+	 * Sets the feuerwehr
+	 *
+	 * @param integer $feuerwehr
+	 * @return void
+	 */
+	public function setFeuerwehr($feuerwehr) {
+		$this->feuerwehr = $feuerwehr;
+	}
 	/**
 	 * Returns the name
 	 *

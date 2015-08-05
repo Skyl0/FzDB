@@ -81,9 +81,18 @@ $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fzkategorie'] = array(
 				'type' => 'text',
 				'cols' => 40,
 				'rows' => 15,
-				'eval' => 'trim'
+				'eval' => 'trim',
+				'wizards' => array(
+					'RTE' => array(
+						'icon' => 'wizard_rte2.gif',
+						'notNewRecords'=> 1,
+						'RTEonly' => 1,
+						'script' => 'wizard_rte.php',
+						'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
+						'type' => 'script'
+					)
+				)
 			),
-			'defaultExtras' => 'richtext[]'
 		),
 		'bild' => array(
 			'exclude' => 1,

@@ -84,7 +84,7 @@ $GLOBALS['TCA']['tx_y7fahrzeugdatenbank_domain_model_fahrzeug'] = array(
 			'disabled' => 'hidden',
 
 		),
-		'searchFields' => 'name,beschreibung,bild,datenblatt,kategorie,',
+		'searchFields' => 'name,beschreibung,bild,datenblatt,kategorie,feuerwehr,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Fahrzeug.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_y7fahrzeugdatenbank_domain_model_fahrzeug.gif'
 	),
